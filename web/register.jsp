@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.regex.Pattern" %>
+<%@ page import="java.util.regex.Matcher" %><%--
   Created by IntelliJ IDEA.
   User: Dell
   Date: 11/21/2019
@@ -12,7 +13,11 @@
 </head>
 <body>
 
-
+<%
+    Pattern p = Pattern.compile("^[ A-Za-z]+$");
+    Matcher m = p.matcher("aaaaab");
+    boolean b = m.matches();
+%>
 <h1>Registration</h1>
 <hr>
 </h3>Enter Fields To Register Student</h3>
