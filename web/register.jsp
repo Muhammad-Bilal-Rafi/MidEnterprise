@@ -21,6 +21,7 @@
 <h1>Registration</h1>
 <hr>
 </h3>Enter Fields To Register Student</h3>
+<center>
 <form action="save/" method="post">
     Name: <input type="text" placeholder="Enter First Name" name="fname" ><br>
     Email: <input type="email" placeholder="Enter Email" name="email"><br>
@@ -32,6 +33,6 @@
     <input type="submit" value="SignUp"> <div>    </div>  <input type="reset" value="Reset"><br>
         Already registered <a href="login.jsp">Login </a>
 </form>
-
+    </center>
 </body>
 </html>

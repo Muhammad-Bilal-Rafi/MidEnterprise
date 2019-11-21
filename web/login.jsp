@@ -15,15 +15,16 @@
 <h1>Login</h1>
 <hr>
 </h3>Enter Fields To Register</h3>
+<center>
 <form action="save/" method="post">
 
     Email: <input type="email" placeholder="Enter Email" name="email"><br>
     Password: <input type="text" placeholder="Enter password" maxlength = "8" name="password" ><br>
 
-    <input type="submit" value="Login"> <div>
+    <input type="submit" value="Login" > <div>
     New User <a href="register.jsp">Register </a>
 </div>
 </form>
-
+    </center>
 </body>
 </html>
