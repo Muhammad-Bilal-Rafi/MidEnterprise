@@ -19,7 +19,7 @@
     try {
 
         while (resultSet.next()){
-            if(resultSet.getString("email").equalsIgnoreCase(email) && resultSet.getString("password").equalsIgnoreCase(password))
+            if(resultSet.getString("email")==email && resultSet.getString("password")==password)
             {
 
                 response.sendRedirect("jobs.jsp");
@@ -30,8 +30,6 @@
     } catch (SQLException e) {
         e.printStackTrace();
     }
-
-
 
         response.sendRedirect("register.jsp");
 

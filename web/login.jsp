@@ -30,11 +30,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
 
+        body {
+            background-color: #5fff46;
+        }
+
         .form-control {
             min-height: 41px;
-            background: #fff;
+            background: #5affdf;
             box-shadow: none !important;
-            border-color: #e3e3e3;
+            border-color: #081725;
         }
         .form-control:focus {
             border-color: #70c5c0;
@@ -43,7 +47,7 @@
             border-radius: 2px;
         }
         .login-form {
-            width: 350px;
+            width: 500px;
             margin: 0 auto;
             padding: 100px 0 30px;
         }
@@ -52,7 +56,7 @@
             border-radius: 2px;
             margin-bottom: 15px;
             font-size: 13px;
-            background: #ececec;
+            background: #afece1;
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
             padding: 30px;
             position: relative;
@@ -106,9 +110,7 @@
         .login-form form a:hover {
             text-decoration: underline;
         }
-        .b{
-            background-color:gray;
-        }
+
     </style>
 </head>
 <body id="page-top">
@@ -131,7 +133,7 @@
             </div>
 
         </form>
-        <p class="text-center small">Don't have an account?<a href="#" >Sign up here!</a></p>
+        <p class="text-center small">Don't have an account?<a href="register.jsp" >Sign up here!</a></p>
     </div>
 </header>
 </body>
