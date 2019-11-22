@@ -22,7 +22,7 @@
 <hr>
 </h3>Enter Fields To Register Student</h3>
 <center>
-<form action="save/" method="post">
+<form action="RegisterCode.jsp" method="post">
     Name: <input type="text" placeholder="Enter First Name" name="fname" ><br>
     Email: <input type="email" placeholder="Enter Email" name="email"><br>
     Password: <input type="text" placeholder="Enter password" maxlength = "8" name="password" ><br>

@@ -6,7 +6,7 @@ import java.sql.*;
  * Created by fawad.tariq on 9/26/2019.
  */
 public class DbConnection {
-    private String dbURL = "jdbc:mysql://localhost:3306/mid";
+    private String dbURL = "jdbc:mysql://localhost:3306/eadmid";
     private String username = "root";
     private String password = "";
     private Connection connection;
@@ -55,4 +55,55 @@ public class DbConnection {
             e.printStackTrace();
         }
     }
+    public ResultSet getResults()
+    {
+        ResultSet result=null;
+        try {
+            String sqlQuery = "SELECT * FROM registraion";
+            Statement statement = connection.createStatement();
+            result = statement.executeQuery(sqlQuery);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public void insertJob(String title,String description,String jobtime,String jobcity,int postedby){
+        try {
+            System.out.println("In Inert JObs Function");
+            String sqlQuery = "INSERT INTO jobs(title,description,jobtype,jobcity,postedby) VALUES(?,?,?,?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+
+            preparedStatement.setString(1, title);
+            preparedStatement.setString(2, description);
+            preparedStatement.setString(3, jobtime);
+            preparedStatement.setString(4, jobcity);
+            preparedStatement.setInt(5, postedby);
+
+            int noOfRowsInserted = preparedStatement.executeUpdate();
+            if(noOfRowsInserted>0){
+                System.out.println(noOfRowsInserted + " rows inserted!");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public ResultSet getjobs()
+    {
+        ResultSet result=null;
+        try {
+            String sqlQuery = "SELECT * FROM jobs";
+            Statement statement = connection.createStatement();
+            result = statement.executeQuery(sqlQuery);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+
+
 }

@@ -12,36 +12,29 @@
 </head>
 <body>
 
-
-
-
 <h1>Person Register</h1>
 <hr>
 </h3>Enter Fields To Register Student</h3>
 <center>
-<form action="save/" method="post">
+<form action="saveJobRecord.jsp" method="post">
 
      Title: <input type="text" placeholder="Enter Title" name="title" ><br>
-    <textarea rows="4" cols="50">
+    <textarea  name="description" rows="4" cols="50">
 Description
 </textarea>
 
     <br>
     Job Type:<br>
-    <input type="radio" name="full" value="full">Full Time<br>
-    <input type="radio" name="part" value="part">Part Time <br>
+    <input type="radio" name="jobtype" value="full Time">Full Time<br>
+    <input type="radio" name="jobtype" value="part Time">Part Time <br>
     <br>
     City:<br>
-    <select>
-        <option value="isb">Islamabad</option>
-        <option value="kar">Karachi</option>
-        <option value="lahr">Lahore</option>
-        <option value="multn">Multan</option>
+    <select name="city">
+        <option value="Islamabad">Islamabad</option>
+        <option value="karachi">Karachi</option>
+        <option value="lahore">Lahore</option>
+        <option value="multan">Multan</option>
     </select>
-
-    <input type="dropdown" name="gender" value="male"> Male<br>
-    <input type="radio" name="gender" value="female"> Female<br>
-    <br>
 
 
     <input type="submit" value="Pst Job"> <div>    </div>
