@@ -118,7 +118,7 @@
 <h1>Registration</h1>
 <hr>
 
-<form action="jobs.jsp" method="post">
+<form action="saveUserRecord.jsp" method="post">
     <div class="form-group ">
    <h3> Name:</h3> <input type="text" placeholder="Enter First Name" class="form-control inquire-control" name="fname" required="" aria-required="true"><br>
     </div><br>
@@ -126,7 +126,7 @@
         <h3> Email:  </h3><input type="email" placeholder="Enter Email" name="email" class="form-control inquire-control" id="email" placeholder="Email" required="" aria-required="true">
     </div><br>
     <div class="form-group ">
-        <h3> Password:  </h3> <input type="text" placeholder="Enter password" maxlength = "8" name="password" class="form-control inquire-control" name="fname" required="" aria-required="true"><br>
+        <h3> Password:  </h3> <input type="text" placeholder="Enter password" maxlength = "8" name="password" class="form-control inquire-control" required="" aria-required="true"><br>
     </div><br>
     <input type="radio" name="gender"  required="true"  value="confirm"> I accept term and conditions<br>
 

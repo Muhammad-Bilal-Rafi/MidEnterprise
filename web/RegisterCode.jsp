@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-
+/*
     Class.forName("com.mysql.jdbc.Driver");
 String url="jdbc:mysql://localhost:3306/eadmid";
 String username="root";
@@ -19,7 +19,7 @@ Connection conn= DriverManager.getConnection(url, username, password);
         String t = request.getParameter("email");
         String e = request.getParameter("password");
 
-        String q = "INSERT into registraion(name,email,password) values(?,?,?)";
+        String q = "INSERT into registraion(fname,email,password) values(?,?,?)";
 
         Statement stmt = null;
         int rs;
@@ -38,6 +38,6 @@ response.sendRedirect("login.jsp");
 
         }
 
-
+*/
 
 %>

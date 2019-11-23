@@ -8,21 +8,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<html>
+<head></head>
+<body>
 <%
 
   String email=request.getParameter("email");
   String password=request.getParameter("password");
-
+  boolean found=false;
   out.print(email+" hello "+password);
     DbConnection db=new DbConnection();
     ResultSet resultSet=db.getResults();
     try {
 
         while (resultSet.next()){
-            if(resultSet.getString("email")==email && resultSet.getString("password")==password)
+            if(resultSet.getString("email").equalsIgnoreCase(email) && resultSet.getString("password").equalsIgnoreCase(password))
             {
 
-                response.sendRedirect("jobs.jsp");
+                found=true;
+                break;
             }
 
         }
@@ -31,6 +36,17 @@
         e.printStackTrace();
     }
 
-        response.sendRedirect("register.jsp");
+        if(found==true)
+        {
+            response.sendRedirect("jobs.jsp");
+
+        }
+        else
+            {
+                response.sendRedirect("register.jsp");
+            }
 
 %>
+
+</body>
+</html>

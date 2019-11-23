@@ -24,9 +24,9 @@ public class DbConnection {
         }
     }
 
-    public void insertData(String name,String email,String regNo){
+    public void insertData(String name,String email,String password){
         try {
-            String sqlQuery = "INSERT INTO persons(name,email,password) VALUES(?,?,?)";
+            String sqlQuery = "INSERT INTO registraion(name,email,password) VALUES(?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, email);
