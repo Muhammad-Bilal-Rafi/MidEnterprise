@@ -123,14 +123,14 @@ Description
     <input type="radio" name="jobtype" value="full Time">Full Time<br>
     <input type="radio" name="jobtype" value="part Time">Part Time <br>
     <br>
-    City:<br>
+    City:
     <select name="city">
         <option value="Islamabad">Islamabad</option>
         <option value="karachi">Karachi</option>
         <option value="lahore">Lahore</option>
         <option value="multan">Multan</option>
     </select>
-
+    <br>
     <button input type="submit" value="Reset" style="text-align:center" class="btn btn-primary btn-lg">Post Job</button></a>
 
 </form>

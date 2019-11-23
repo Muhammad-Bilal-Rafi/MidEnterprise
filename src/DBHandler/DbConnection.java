@@ -40,21 +40,7 @@ public class DbConnection {
         }
     }
 
-    public void displayRecords(){
-        try {
-            String sqlQuery = "SELECT * FROM persons";
-            Statement statement = connection.createStatement();
-            ResultSet result = statement.executeQuery(sqlQuery);
-            while (result.next()){
-                System.out.println("Name is "+result.getString("name"));
-                System.out.println("Email is "+result.getString("email"));
-                System.out.println("Password is "+result.getString("password"));
-            }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
     public ResultSet getResults()
     {
         ResultSet result=null;
